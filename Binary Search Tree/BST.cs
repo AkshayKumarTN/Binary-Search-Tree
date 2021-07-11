@@ -11,6 +11,7 @@ namespace Binary_Search_Tree
 
         public void add(int data)
         {
+            treeSize++;
             Node node = new Node(data);
             if (root == null)
                 root = node;
@@ -44,18 +45,21 @@ namespace Binary_Search_Tree
                 }
             }
         }
-
-        public void InOrderTraversal(Node temp)
+        public int Size()
         {
-      
-            if (temp.leftNode != null)
+            return treeSize;
+        }
+
+        public void Display()
+        {
+            if (root == null)
             {
-                InOrderTraversal(temp.leftNode);
+                Console.WriteLine("\n Binary Search Tree is Empty");
             }
-            Console.Write(" "+temp.data);
-            if (temp.rightNode != null)
+            else
             {
-                InOrderTraversal(temp.rightNode);
+                Console.Write("\n In Order Traversal :");
+                root.InOrderTraversal();
             }
         }
 

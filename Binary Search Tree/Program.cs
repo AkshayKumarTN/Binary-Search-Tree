@@ -11,8 +11,9 @@ namespace Binary_Search_Tree
             binarySearchTree.add(56);
             binarySearchTree.add(30);
             binarySearchTree.add(70);
-            Console.Write("In Order Traversal :");
-            binarySearchTree.InOrderTraversal(binarySearchTree.root);
+            
+            binarySearchTree.Display();
+            Console.WriteLine("\n Size of Binary Search Tree is : "+binarySearchTree.Size());
             Console.WriteLine();
         }
     }
