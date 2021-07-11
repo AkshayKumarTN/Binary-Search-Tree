@@ -49,6 +49,29 @@ namespace Binary_Search_Tree
         {
             return treeSize;
         }
+        
+        public bool Search(int userData)
+        {
+            if (root == null)
+            {
+                Console.WriteLine("\n Binary Search Tree is Empty");
+                return false;
+            }
+            else
+            {
+                Node temp = root;
+                while (temp != null)
+                {
+                    if (temp.data == userData)
+                        return true;
+                    else if (temp.data > userData)
+                        temp = temp.leftNode;
+                    else
+                        temp = temp.rightNode;
+                }
+                return false;
+            }
+        }
 
         public void Display()
         {

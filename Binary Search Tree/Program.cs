@@ -13,7 +13,13 @@ namespace Binary_Search_Tree
             binarySearchTree.add(70);
             
             binarySearchTree.Display();
+
             Console.WriteLine("\n Size of Binary Search Tree is : "+binarySearchTree.Size());
+
+            if (binarySearchTree.Search(63))
+                Console.WriteLine(" Element 63 is Found in binary search tree");
+            else
+                Console.WriteLine(" Element 63 is NOT Found in binary search tree");
             Console.WriteLine();
         }
     }
