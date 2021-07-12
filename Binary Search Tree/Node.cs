@@ -4,12 +4,12 @@ using System.Text;
 
 namespace Binary_Search_Tree
 {
-    class Node
+    class Node<T> 
     {
-        internal int data;
-        public Node leftNode;
-        public Node rightNode;
-        public Node(int data)
+        public T data;
+        public Node<T> leftNode;
+        public Node<T> rightNode;
+        public Node(T data)
         {
             this.data = data;
         }

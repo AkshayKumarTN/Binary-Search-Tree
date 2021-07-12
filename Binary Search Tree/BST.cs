@@ -4,24 +4,24 @@ using System.Text;
 
 namespace Binary_Search_Tree
 {
-    class BST
+    class BST<T> where T : IComparable<T>
     {
-        public Node root;
+        public Node<T> root;
         public int treeSize = 0;
 
-        public void add(int data)
+        public void add(T data)
         {
             treeSize++;
-            Node node = new Node(data);
+            Node<T> node = new Node<T>(data);
             if (root == null)
                 root = node;
             else
             {
-                Node temp = root;
+                Node<T> temp = root;
                 bool alive = true;
                 while (alive)
                 {
-                   if (temp.data > node.data)
+                   if ( 0<(temp.data.CompareTo(node.data)))
                     {
                         if (temp.leftNode == null)
                         {
@@ -50,7 +50,7 @@ namespace Binary_Search_Tree
             return treeSize;
         }
         
-        public bool Search(int userData)
+        public bool Search(T userData)
         {
             if (root == null)
             {
@@ -59,12 +59,12 @@ namespace Binary_Search_Tree
             }
             else
             {
-                Node temp = root;
+                Node<T> temp = root;
                 while (temp != null)
                 {
-                    if (temp.data == userData)
+                    if (temp.data.Equals( userData))
                         return true;
-                    else if (temp.data > userData)
+                    else if (0<(temp.data.CompareTo(userData)))
                         temp = temp.leftNode;
                     else
                         temp = temp.rightNode;
