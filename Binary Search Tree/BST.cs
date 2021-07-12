@@ -21,25 +21,25 @@ namespace Binary_Search_Tree
                 bool alive = true;
                 while (alive)
                 {
-                   if (root.data > node.data)
+                   if (temp.data > node.data)
                     {
-                        if (root.leftNode == null)
+                        if (temp.leftNode == null)
                         {
-                            root.leftNode = node;
+                            temp.leftNode = node;
                             alive = false;
                         }
                         else
-                            root = root.leftNode;
+                            temp = temp.leftNode;
                    }
                    else
                    {
-                        if (root.rightNode == null)
+                        if (temp.rightNode == null)
                         {
-                            root.rightNode = node;
+                            temp.rightNode = node;
                             alive = false;
                         }
                         else
-                            root = root.rightNode;
+                            temp = temp.rightNode;
                    }
                     
                 }
