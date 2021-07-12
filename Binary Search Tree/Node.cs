@@ -8,7 +8,7 @@ namespace Binary_Search_Tree
     {
         internal int data;
         public Node leftNode;
-        internal Node rightNode;
+        public Node rightNode;
         public Node(int data)
         {
             this.data = data;
